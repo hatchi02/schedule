@@ -1,0 +1,41 @@
+<div>
+  <h2>予定一覧</h2>
+  <button>新規追加</button>
+</div>
+
+<table>
+   <thead>
+    <tr>
+      <th>id</th>
+      <th>タイトル</th>
+      <th>開始日</th>
+      <th>終了日</th>
+      <th>終日</th>
+      <th>更新日時</th>
+      <th>参照</th>
+      <th>編集</th>
+      <th>削除</th>
+    </tr>
+  </thead>
+ 
+   <tbody>
+     <% @posts.each do |post| %>
+       <tr>
+         <td><%= post.id %></td>
+         <td><%= post.title %></td>
+         <td><%= post.date_start.to_s(:datetime_jp) %></td>
+         <td><%= post.date_end.to_s(:datetime_jp) %></td>
+         <td><%= post.all_day %></td>
+         <td>
+           <%= link_to "参照", post %>
+         </td>
+         <td>
+           <%= link_to "編集", [:edit, post] %>
+         </td>
+         <td>
+           <%= button_to "削除", post, method: :delete, form: { data: { turbo_confirm: "本当に削除しますか？" } } %>
+         </td>
+       </tr>
+     <% end %>
+   </tbody>
+ </table>
