@@ -1,10 +1,10 @@
 <div>
   <h2>予定一覧</h2>
-  <button>新規追加</button>
+  <%= link_to "新規追加", :new_post %>
 </div>
 
 <table>
-   <thead>
+  <thead>
     <tr>
       <th>id</th>
       <th>タイトル</th>
@@ -17,25 +17,25 @@
       <th>削除</th>
     </tr>
   </thead>
- 
-   <tbody>
-     <% @posts.each do |post| %>
-       <tr>
-         <td><%= post.id %></td>
-         <td><%= post.title %></td>
-         <td><%= post.date_start.to_s(:datetime_jp) %></td>
-         <td><%= post.date_end.to_s(:datetime_jp) %></td>
-         <td><%= post.all_day %></td>
-         <td>
-           <%= link_to "参照", post %>
-         </td>
-         <td>
-           <%= link_to "編集", [:edit, post] %>
-         </td>
-         <td>
-           <%= button_to "削除", post, method: :delete, form: { data: { turbo_confirm: "本当に削除しますか？" } } %>
-         </td>
-       </tr>
-     <% end %>
-   </tbody>
- </table>
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.id %></td>
+        <td><%= post.title %></td>
+        <td><%= post.date_start.to_s(:datetime_jp) %></td>
+        <td><%= post.date_end.to_s(:datetime_jp) %></td>
+        <td><%= post.all_day %></td>
+        <td>
+          <%= link_to "参照", post %>
+        </td>
+        <td>
+          <%= link_to "編集", [:edit, post] %>
+        </td>
+        <td>
+          <%= link_to "削除", user, method: :delete, data: { confirm: "本当に削除しますか？" } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
