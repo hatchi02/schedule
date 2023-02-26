@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+ header {
+  background-color: #1c1d3b;
+  height: 50px; /*← ヘッダーの高さを80pxに指定*/
+  position: fixed; /*← ヘッダーを固定する*/
+  top: 0; /*← 一番上から０pxの位置にヘッダーを固定*/
+  width: 100%;
+  text-align: center;
+}
+
+.layout-title {
+  color: #fff;
+  font-size: 14px;
+}
