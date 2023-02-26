@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   def index
+    @posts = Post.all
   end
 
   def new
@@ -14,7 +15,7 @@ class PostsController < ApplicationController
   def edit
   end
 
-  def upload
+  def update
   end
 
   def destroy
