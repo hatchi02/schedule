@@ -30,13 +30,14 @@
         <tr>
           <td><%= post.id %></td>
           <td><%= post.title %></td>
-          <td><%= post.start_date.to_s(:datetime_jp) %></td>
-          <td><%= post.end_date.to_s(:datetime_jp) %></td>
+          <td><%= post.start_date.strftime("%Y/%m/%d") %></td>
+          <td><%= post.end_date.strftime("%Y/%m/%d") %></td>
           <td>
             <% if post.all_day %>
               ○
             <% end %>
           </td>
+          <td><%= post.updated_at.to_s(:datetime_jp) %></td>
           <td>
             <%= link_to "参照", post %>
           </td>
