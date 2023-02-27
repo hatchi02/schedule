@@ -27,3 +27,22 @@
   color: #fff;
   font-size: 14px;
 }
+
+.container {
+  width: 100%;
+  margin-left: 25px;
+  margin-right: 25px;
+  padding-top: 50px;
+}
+
+.index-top {
+  align-items: baseline;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+button {
+  color: #2962ff;
+  float: right;
+}

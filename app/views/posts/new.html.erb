@@ -1,1 +1,37 @@
-予定の新規追加
+ <h2>予定の新規追加</h2>
+ 
+ <%= form_with model: @post do |f| %>
+   <table>
+     <tr>
+       <th><%= f.label :title ,"タイトル" %></th>
+       <td><%= f.text_field :title %></td>
+     </tr>
+ 
+     <tr>
+       <th><%= f.label :start_date ,"開始日" %></th>
+       <td><%= f.date_field :start_date %></td>
+     </tr>
+ 
+     <tr>
+       <th><%= f.label :end_date ,"終了日" %></th>
+       <td><%= f.date_field :end_date %></td>
+     </tr>
+ 
+     <tr>
+       <th><%= f.label :all_day ,"終日" %></th>
+       <td><%= f.check_box :all_day, checked:true %></td>
+     </tr>
+
+     <tr>
+       <th><%= f.label :content ,"メモ" %></th>
+       <td><%= f.text_area :content %></td>
+     </tr>
+   </table>
+ 
+   <div>
+     <ul>
+       <li><%= link_to "キャンセル", :posts %></li>
+       <li><%= f.submit "保存"%></li>
+     </ul>
+   </div>
+ <% end %>
