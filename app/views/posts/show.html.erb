@@ -1,1 +1,26 @@
-一覧に戻る
+<div class="container">
+
+<%= @post.title %>
+
+<%= link_to "編集", [:edit, @post] %>
+
+ <table>
+   <tr>
+     <th>開始日</th>
+     <td><%= @post.start_date %></td>
+   </tr>
+   <tr>
+     <th>終了日</th>
+     <td><%= @post.end_date %></td>
+   </tr>
+   <tr>
+     <th>終日</th>
+     <td><% if @post.all_day %>◯<% end %></td>
+   </tr>
+   <tr>
+     <th>メモ</th>
+     <td><%= @post.content %></td>
+   </tr>
+ </table>
+
+ </div>
