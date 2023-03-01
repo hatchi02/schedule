@@ -54,10 +54,12 @@
 </div>
 
 <footer>
-  <div class = footer-container>
-    <h2>
-      スケジュール数：<%= Post.count%>
-      現在の日時:<span id = cullent-date></span>  
-    </h2>
+  <div class="footer-container">
+    <div class="post-infomation-1">
+      <%= "スケジュール数： #{Post.count}" %>
+    </div>
+    <div class="index-information-2">
+      <%= "本日の日付： #{Date.today}" %>
+    </div>
   </div>
 </footer>
