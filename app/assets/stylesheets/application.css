@@ -14,20 +14,6 @@
  *= require_self
  */
 
- header {
-  background-color: #1c1d3b;
-  height: 50px; /*← ヘッダーの高さを80pxに指定*/
-  position: fixed; /*← ヘッダーを固定する*/
-  top: 0; /*← 一番上から０pxの位置にヘッダーを固定*/
-  width: 100%;
-  text-align: center;
-}
-
-.layout-title {
-  color: #fff;
-  font-size: 14px;
-}
-
 .container {
   padding-top: 50px
   width: 100%;
@@ -36,14 +22,76 @@
   padding-top: 50px;
 }
 
-.index-top {
-  align-items: baseline;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 18px;
+header {
+  background-color: #1c1d3b;
+  height: 50px; /*← ヘッダーの高さを80pxに指定*/
+  margin-top: 0px;
+  margin-bottom: 24px;
+  width: 100%;
+  text-align: center;
 }
 
-button {
+body {
+  margin-top: 0;
+  background-color: #f6f6f6;
+}
+
+.layout-title {
+  margin-top: 0;
+  color: #fff;
+  font-size: 14px;
+}
+
+.index-top {
+  display: flex;
+  margin-bottom: 18px;
+}
+
+.index-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  float: left;
+}
+
+.index-button {
   color: #2962ff;
+  text-decoration: none;
+  float: right;
+}
+
+.index-table {
+  background-color: #fff;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 0;
+  border-radius: 4px;
+  box-shadow: 0 0 1px rgb(0 0 0 / 2%), 0 1px 3px rgb(50 50 93 / 15%);
+}
+
+table th {
+  background-color: #fff;
+  padding: 10px 20px;
+}
+
+table td {
+  background-color: #fff;
+  padding: 10px 20px;
+}
+
+footer {
+  margin-top: 40px;
+  background-color: #fff;
+  box-shadow: 0 0 1px rgb(0 0 0 / 2%), 0 1px 3px rgb(50 50 93 / 15%);
+  display: flex;
+  padding: 10px 20px;
+
+}
+
+.index-information-1 {
+  float: left;
+}
+
+.index-information-2 {
   float: right;
 }
