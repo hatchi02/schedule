@@ -1,6 +1,4 @@
 <h2>予定の新規追加</h2>
-
-<%= render "shared/error", obj: @post %>
  
 <%= form_with model: @post do |f| %>
   <table>
@@ -21,7 +19,7 @@
 
     <tr>
       <th><%= f.label :all_day ,"終日" %></th>
-      <td><%= f.check_box :all_day %></td>
+      <td><%= f.check_box :all_day, checked:true %></td>
     </tr>
 
     <tr>
